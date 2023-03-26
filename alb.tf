@@ -1,5 +1,5 @@
-resource "aws_lb" "test" {
-  name               = "${var.name}-{var.env}"
+resource "aws_lb" "main" {
+  name               = "${var.name}-${var.env}"
   internal           = var.internal
   load_balancer_type = var.load_balancer_type
   subnets            = var.subnets
@@ -8,6 +8,6 @@ resource "aws_lb" "test" {
 
   tags = merge(
     var.tags,
-    {Name = "${var.name}-{var.env}"}
+    {Name = "${var.name}-${var.env}"}
   )
 }

@@ -1,4 +1,4 @@
-ouput "alb"{
+output "alb"{
   value= aws_lb.main
 }
 
